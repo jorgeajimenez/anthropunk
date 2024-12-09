@@ -1,6 +1,5 @@
-import kagglehub
+with open('anthro_report.md', 'r') as report:
+    template_contents = report.read()
 
-# Download latest version
-path = kagglehub.dataset_download("aleespinosa/apple-watch-and-fitbit-data")
+report_content = template_contents.replace("{{report_contents_body}}", 'lol')
 
-print("Path to dataset files:", path)
